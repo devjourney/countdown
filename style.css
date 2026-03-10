@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #1a1a2e;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: #aaa;
+  cursor: text;
+  outline: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+h1:hover {
+  border-bottom-color: #444;
+}
+
+h1:focus {
+  border-bottom-color: #0f3460;
+  color: #eee;
+}
+
+.timer-display {
+  font-size: 6rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 200;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+}
+
+.timer-display.expired {
+  color: #e74c3c;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.input-group.hidden {
+  display: none;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.field input {
+  width: 5rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  background: #16213e;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  color: #eee;
+}
+
+.field label {
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+button {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+#start-btn {
+  background: #0f3460;
+  color: #eee;
+}
+
+#start-btn:hover:not(:disabled) {
+  background: #1a4a7a;
+}
+
+#pause-btn {
+  background: #e94560;
+  color: #eee;
+}
+
+#pause-btn:hover:not(:disabled) {
+  background: #f05a73;
+}
+
+#reset-btn {
+  background: #333;
+  color: #eee;
+}
+
+#reset-btn:hover:not(:disabled) {
+  background: #444;
+}
